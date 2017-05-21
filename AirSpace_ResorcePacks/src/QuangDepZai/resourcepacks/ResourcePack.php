@@ -55,7 +55,7 @@ class ResourcePack extends PluginBase implements Listener {
 		}
 
 		if(!file_exists($this->plugin->getDataFolder() . "resourcepack/" . "resource_packs.yml")){
-			file_put_contents($this->plugin->getDataFolder() . "resourcepack/" . "resource_packs.yml", file_get_contents("resource_packs.yml"));
+			file_put_contents($this->plugin->getDataFolder() . "resourcepack/" . "resource_pack.yml", file_get_contents("resource_packs.yml"));
 		}
 
 		$this->resourcePacksConfig = new Config($this->plugin->getDataFolder() . "resourcepack/" . "resource_packs.yml", Config::YAML, []);
