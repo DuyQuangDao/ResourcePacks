@@ -43,7 +43,7 @@ class ResourcePack extends PluginBase implements Listener {
 	/** @var ResourcePack[] */
 	private $uuidList = [];
 
-	public function ResourcePack(Server $server, string $path){
+	public function onEnable(Server $server, string $path){
 		$this->server = $server;
 		$this->path = $path;
 
