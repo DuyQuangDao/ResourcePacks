@@ -1,0 +1,9 @@
+name: AirSpace_ResourcePacks
+main: QuangDepZai\resourcepacks\ResourcePack
+version: 1.0.0
+load: STARTUP
+author: QuangDepZai
+api:
+- 3.0.0
+- 2.0.0
+- 2.1.0
