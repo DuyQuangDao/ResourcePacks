@@ -42,8 +42,12 @@ class ResourcePack extends PluginBase implements Listener {
 
 	/** @var ResourcePack[] */
 	private $uuidList = [];
+	
+	public function onEnable(){
+		$logger->info("[Resource Packs] is enabled");
+	}
 
-	public function onEnable(Server $server, string $path){
+	public function __construct(Server $server, string $path){
 		$this->server = $server;
 		$this->path = $path;
 
@@ -127,5 +131,9 @@ class ResourcePack extends PluginBase implements Listener {
 	 */
 	public function getPackIdList() : array{
 		return array_keys($this->uuidList);
+	}
+	
+	public function onDisable(){
+		$logger->info("[Resource Pack] is disabled, Server aldready off?");
 	}
 }
